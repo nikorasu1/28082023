@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 17</title>
+    <script>
+        function tab()
+        {
+            var num, i, resultado;
+
+            num = parseInt(document.frm.num.value);
+            i = 1;
+            do 
+            {       
+                resultado = num*i;
+                document.getElementById("a").innerHTML = resultado;
+                ++i;
+            }
+            while( i<=10)
+        }
+
+        
+    </script>
+</head>
+<body>
+    <form name="frm">
+        <input type="text" name="num" size="5" value="0"><br>
+        <input type="button" value="go" name="a" onclick="tab();">
+    </form>
+
+    <p id="a"></p>
+    
+</body>
+</html>

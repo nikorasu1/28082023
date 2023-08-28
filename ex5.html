@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 5</title>
+ <script lang="Javascript">
+        function med()
+        {
+            
+            var n1, n2,n3, n4, resultado;
+            n1 = parseInt(document.frm.Num1.value);
+            n2 = parseInt(document.frm.Num2.value);
+            n3 = parseInt(document.frm.Num3.value);
+            n4 = parseInt(document.frm.Num4.value);
+            resultado = (n1 + n2 + n3+ n4) / 4; 
+            
+            document.getElementById("a").innerHTML = "A média é " +resultado;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+        1º valor: <input type="text" name="Num1" size="5" value="0"><br>
+        2º valor: <input type="text" name="Num2" size="5" value="0"><br>
+        3º valor: <input type="text" name="Num3" size="5" value="0"><br>
+        4º valor: <input type="text" name="Num4" size="5" value="0"><br>
+        <input type="button" value="Somar e mostrar a média" name="mostrar" onclick="med();">
+    </form>
+
+    <p id="a"></p>
+    
+</body>
+</htm
