@@ -1,11 +1,11 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Exercicio 17</title>
     <script>
         function tab()
         {
-            var num, i, taba ="", resultado;
+            var num, i, tab ="", resultado;
 
             num = parseInt(document.frm.num.value);
             i = 1;
@@ -14,9 +14,9 @@
 
             {       
                 resultado = num*i;
-                taba += resultado + "<br>";     
+                tab += "<center>" + num +" * " + i + " = "  + resultado + "<br>"+ "</center>";     
             }
-            document.getElementById("a").innerHTML = taba;
+            document.getElementById("a").innerHTML = tab;
         }
 
         
@@ -24,8 +24,10 @@
 </head>
 <body>
     <form name="frm">
+        <center>
         <input type="text" name="num" size="5" value="0"><br>
-        <input type="button" value="go" name="a" onclick="tab();">
+        <input type="button" value="Tabuada" name="a" onclick="tab();">
+        </center>
     </form>
 
     <p id="a"></p>
