@@ -5,17 +5,18 @@
     <script>
         function tab()
         {
-            var num, i, resultado;
+            var num, i, taba ="", resultado;
 
             num = parseInt(document.frm.num.value);
             i = 1;
-            do 
+
+            for (i=1; i<=10; ++i)
+
             {       
                 resultado = num*i;
-                document.getElementById("a").innerHTML = resultado;
-                ++i;
+                taba += resultado + "<br>";     
             }
-            while( i<=10)
+            document.getElementById("a").innerHTML = taba;
         }
 
         
