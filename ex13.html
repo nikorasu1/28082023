@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercico 13</title>
+</head>
+    <script>
+        function triangulo()
+        {
+            var l1, l2, l3, verificador;
+
+
+            l1 = parseInt(document.frm.l1.value);
+            l2 = parseInt(document.frm.l2.value);
+            l3 = parseInt(document.frm.l3.value);
+
+            if (l1+l2>l3 && l1+l3>l2 && l2+l3>l1)
+            {
+                if (l1==l2 & l2==l3)
+
+                {
+                    document.getElementById("destino").innerHTML = "Equilátero.";
+                    document.getElementById("a").src = "img/equilatero.png";
+                }
+
+                else if (l1==l2 || l2==l3 || l1==l3)
+
+                {
+                    document.getElementById("destino").innerHTML = "Isósceles.";
+                    document.getElementById("a").src = "img/iso.png";
+                }
+
+                else
+
+                {
+                    document.getElementById("destino").innerHTML = "Escaleno.";
+                    document.getElementById("a").src = "img/esc.png";
+                }
+                
+            }
+
+            else
+            {
+                document.getElementById("destino").innerHTML = "Não forma triângulo.";
+            }
+        }
+    </script>
+<body>
+    <center>
+    <form name="frm">
+        1º valor: <input type="text" name="l1" size="3" value="0"><br>
+        2º valor: <input type="text" name="l2" size="3" value="0"><br>
+        3º valor: <input type="text" name="l3" size="3" value="0"><br>
+        <input type="button" value="Verificar" name="ver" onclick="triangulo();">
+    </form>
+    <p id="destino"></p>
+    <img width="245" height="300" id="a">
+    </center>
+</body>
+</html>
